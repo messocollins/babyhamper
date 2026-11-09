@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Little Bundles – Build a newborn gift hamper</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="logo" href="#top">Little Bundles</a>
+    <nav>
+      <a href="#builder">Build a hamper</a>
+      <a href="#promise">Our promise</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="hero-text">
+      <h1>Gifts for the smallest people, packed by you.</h1>
+      <p>Choose a basket, fill it with soft baby clothes, tie it with a ribbon in your colour, and write the tag. We pack and deliver it.</p>
+      <a class="btn" href="#builder">Build your hamper</a>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="stage" data-basket="wicker">
+        <div class="handle"></div>
+        <div class="items"><span>🧸</span><span>🧦</span><span>👕</span><span>🧢</span><span>🧤</span></div>
+        <div class="basket"><div class="ribbon"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <main id="builder">
+    <div class="steps">
+      <section class="panel">
+        <h2>Pick your basket</h2>
+        <div id="baskets" class="basket-options"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Choose the clothing</h2>
+        <label class="field">Baby size
+          <select id="size">
+            <option>Newborn (0–3 months)</option>
+            <option>3–6 months</option>
+            <option>6–12 months</option>
+          </select>
+        </label>
+        <div id="clothes" class="product-grid"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Pick a ribbon colour</h2>
+        <div id="themes" class="themes"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Add something extra</h2>
+        <div id="extras" class="extras"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Write the gift tag</h2>
+        <div class="tag-grid">
+          <div>
+            <label class="field">Baby's name
+              <input type="text" id="babyName" maxlength="24" placeholder="Aarav">
+            </label>
+            <label class="field">Your message
+              <textarea id="message" rows="4" maxlength="140" placeholder="Welcome to the world, little one!"></textarea>
+            </label>
+          </div>
+          <div class="tag" aria-live="polite">
+            <p class="tag-to">For <strong id="tagName">your little one</strong></p>
+            <p id="tagMsg">Welcome to the world, little one!</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <aside class="summary">
+      <h2>Your hamper</h2>
+      <div class="stage live" id="liveStage" data-basket="">
+        <div class="handle"></div>
+        <div class="items" id="liveItems"></div>
+        <div class="basket"><div class="ribbon"></div></div>
+      </div>
+      <ul id="summaryList" class="lines"></ul>
+      <p class="total"><span>Total</span><strong id="total">₹0</strong></p>
+      <button class="btn wide" id="orderBtn">Place order</button>
+      <button class="link" id="resetBtn">Start over</button>
+      <p id="orderMsg" class="err" role="alert"></p>
+    </aside>
+  </main>
+
+  <section class="promise" id="promise">
+    <h2>What every hamper includes</h2>
+    <div class="promise-grid">
+      <p><strong>Skin-safe fabrics.</strong> Soft cotton, washed before packing.</p>
+      <p><strong>Packed by hand.</strong> Your tag is written out and tucked in.</p>
+      <p><strong>Easy swaps.</strong> Wrong size? We exchange it within 15 days.</p>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p class="logo">Little Bundles</p>
+    <p>hello@littlebundles.example &nbsp;·&nbsp; +91 00000 00000</p>
+    <p class="small">© 2026 Little Bundles. A student project.</p>
+  </footer>
+
+  <dialog id="done">
+    <h2>Order placed!</h2>
+    <p id="doneText"></p>
+    <button class="btn" id="closeDone">Close</button>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
